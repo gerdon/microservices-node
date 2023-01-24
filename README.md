@@ -2,6 +2,15 @@
 
 ## Node Microservices
 
+```mermaid
+  graph LR
+      A[Client] -->|Request| B(API Gateway)
+      B --> |Redirect| C{Route}
+      C -->|Request| D[Order]
+      C -->|Request| E[Payment]
+      C -->|Request| F[...]
+```
+
 - Order
 ```
 index.js (Running on PORT 8081)
